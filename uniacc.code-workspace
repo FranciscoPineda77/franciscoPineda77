@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "../../../uniacc"
+		},
+		{
+			"path": "../../.."
+		},
+		{
+			"name": "uniacc-1",
+			"path": "../../../uniacc-1"
+		}
+	],
+	"settings": {}
+}
