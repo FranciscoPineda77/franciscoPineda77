@@ -1,0 +1,7 @@
+{
+  "name": "uniacc",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
