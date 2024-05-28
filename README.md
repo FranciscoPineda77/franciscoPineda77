@@ -43,3 +43,5 @@ El código principal del proyecto se estructura de la siguiente manera:
     Ubicación
   </ion-button>
 </ion-content>
+
+Este `README.md` proporciona instrucciones detalladas para la instalación y ejecución del proyecto, así como información sobre las funcionalidades, consideraciones de desarrollo, y cómo contribuir.
