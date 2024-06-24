@@ -3,46 +3,41 @@ import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
-  templateUrl: './home.page.html',
-  styleUrls: ['./home.page.scss'],
+  templateUrl: 'home.page.html',
+  styleUrls: ['home.page.scss'],
 })
 export class HomePage {
 
-  constructor(private alertController: AlertController) { }
+  constructor(private alertController: AlertController) {}
 
-  async remedio1() {
-    const alert = await this.alertController.create({
-      header: 'Remedio 1',
-      message: 'Esta es una acción para el Remedio 1.',
-      buttons: ['OK']
-    });
-    await alert.present();
+  remedio1() {
+    // Lógica para el remedio 1
   }
 
-  async remedio2() {
-    const alert = await this.alertController.create({
-      header: 'Remedio 2',
-      message: 'Esta es una acción para el Remedio 2.',
-      buttons: ['OK']
-    });
-    await alert.present();
+  remedio2() {
+    // Lógica para el remedio 2
   }
 
-  async sos() {
-    const alert = await this.alertController.create({
-      header: 'SOS',
-      message: 'Esta es una acción para el SOS.',
-      buttons: ['OK']
-    });
-    await alert.present();
+  sos() {
+    // Lógica para el botón SOS
   }
 
-  async ubicacion() {
+  ubicacion() {
+    // Lógica para el botón de ubicación
+  }
+
+  llamarHijo() {
+    // Lógica para llamar a un hijo
+    this.presentAlert('Llamar a Hijo', 'Se ha solicitado llamar a un hijo.');
+  }
+
+  async presentAlert(header: string, message: string) {
     const alert = await this.alertController.create({
-      header: 'Ubicación',
-      message: 'Esta es una acción para la Ubicación.',
+      header: header,
+      message: message,
       buttons: ['OK']
     });
+
     await alert.present();
   }
 
