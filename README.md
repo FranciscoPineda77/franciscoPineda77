@@ -43,5 +43,37 @@ El código principal del proyecto se estructura de la siguiente manera:
     Ubicación
   </ion-button>
 </ion-content>
+## Novedades Recientes
+
+- Se ha agregado un mensaje en la pantalla principal que recuerda al usuario tomar sus remedios a tiempo.
+- Se ha implementado un botón para llamar a un hijo directamente desde la aplicación.
+
+### Mensaje sobre Tomar Remedios
+
+En la pantalla principal de la aplicación, hemos incluido un mensaje visible que recuerda a los usuarios la importancia de tomar sus remedios a tiempo. Esto se ha realizado mediante la adición de un componente `ion-card` en el archivo `home.page.html`:
+
+```html
+<ion-card>
+  <ion-card-header>
+    Mensaje sobre tomar remedios
+  </ion-card-header>
+  <ion-card-content>
+    Recuerda tomar tus remedios a tiempo para mantener tu salud.
+  </ion-card-content>
+</ion-card>
+llamarHijo() {
+  this.presentAlert('Llamar a Hijo', 'Se ha solicitado llamar a un hijo.');
+}
+
+async presentAlert(header: string, message: string) {
+  const alert = await this.alertController.create({
+    header: header,
+    message: message,
+    buttons: ['OK']
+  });
+
+  await alert.present();
+}
+
 
 Este `README.md` proporciona instrucciones detalladas para la instalación y ejecución del proyecto, así como información sobre las funcionalidades, consideraciones de desarrollo, y cómo contribuir.
